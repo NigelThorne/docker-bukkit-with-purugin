@@ -18,6 +18,7 @@ ADD http://jruby.org.s3.amazonaws.com/downloads/1.7.12/jruby-complete-1.7.12.jar
 ADD http://dev.bukkit.org/media/files/765/560/purugin-0.7.1-bukkit-1.7.2-R0.2.jar /usr/local/etc/minecraft/plugins/purugin.jar
 
 ADD ./lib/scripts/start /start
+ENV GEM_HOME=./gems
 
 RUN chmod +x /start
 
