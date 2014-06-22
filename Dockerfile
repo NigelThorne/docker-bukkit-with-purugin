@@ -14,6 +14,9 @@ ADD ./lib/supervisor/conf.d/minecraft.conf /etc/supervisor/conf.d/minecraft.conf
 ADD ./lib/minecraft/opts.txt /usr/local/etc/minecraft/opts.txt
 ADD ./lib/minecraft/white-list.txt /usr/local/etc/minecraft/white-list.txt
 ADD ./lib/minecraft/server.properties /usr/local/etc/minecraft/server.properties
+ADD http://jruby.org.s3.amazonaws.com/downloads/1.7.12/jruby-complete-1.7.12.jar /usr/local/etc/minecraft/jruby-complete.jar
+ADD http://dev.bukkit.org/media/files/765/560/purugin-0.7.1-bukkit-1.7.2-R0.2.jar /usr/local/etc/minecraft/plugins/purugin.jar
+
 ADD ./lib/scripts/start /start
 
 RUN chmod +x /start
