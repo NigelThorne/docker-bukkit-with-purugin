@@ -5,8 +5,9 @@ FROM ubuntu:12.04
 ENV DEBIAN_FRONTEND noninteractive
 
 ADD ./lib/apt/sources.list /etc/apt/sources.list
-ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata_2013i-0wheezy1_all.deb /tmp/tzdata_2013i-0wheezy1_all.deb
-ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata-java_2013i-0wheezy1_all.deb  /tmp/tzdata-java_2013i-0wheezy1_all.deb
+
+ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata_2014e-0wheezy1_all.deb /tmp/tzdata_2013i-0wheezy1_all.deb
+ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata-java_2014a-0wheezy1_all.deb   /tmp/tzdata-java_2013i-0wheezy1_all.deb
 
 RUN apt-get update -y; apt-get upgrade -y
 RUN dpkg -i /tmp/tzdata_2013i-0wheezy1_all.deb
