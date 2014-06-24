@@ -1,2 +1,14 @@
-deb http://archive.ubuntu.com/ubuntu precise main universe
-deb-src http://archive.ubuntu.com/ubuntu precise main universe
+#############################################################
+################### OFFICIAL UBUNTU REPOS ###################
+#############################################################
+
+###### Ubuntu Main Repos
+deb http://au.archive.ubuntu.com/ubuntu/ precise main restricted universe 
+deb-src http://au.archive.ubuntu.com/ubuntu/ precise main restricted universe 
+
+###### Ubuntu Update Repos
+deb http://au.archive.ubuntu.com/ubuntu/ precise-security main restricted universe 
+deb http://au.archive.ubuntu.com/ubuntu/ precise-updates main restricted universe 
+deb-src http://au.archive.ubuntu.com/ubuntu/ precise-security main restricted universe 
+deb-src http://au.archive.ubuntu.com/ubuntu/ precise-updates main restricted universe 
+
