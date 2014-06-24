@@ -6,12 +6,12 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ADD ./lib/apt/sources.list /etc/apt/sources.list
 
-ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata_2014e-0wheezy1_all.deb /tmp/tzdata_wheezy1_all.deb
-ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata-java_2014e-0wheezy1_all.deb    /tmp/tzdata-java_wheezy1_all.deb
+#ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata_2014e-0wheezy1_all.deb /tmp/tzdata_wheezy1_all.deb
+#ADD http://ftp.uk.debian.org/debian/pool/main/t/tzdata/tzdata-java_2014e-0wheezy1_all.deb    /tmp/tzdata-java_wheezy1_all.deb
 
 RUN apt-get update -y; apt-get upgrade -y
-RUN dpkg -i /tmp/tzdata_wheezy1_all.deb
-RUN dpkg -i /tmp/tzdata-java_wheezy1_all.deb
+#RUN dpkg -i /tmp/tzdata_wheezy1_all.deb
+#RUN dpkg -i /tmp/tzdata-java_wheezy1_all.deb
 RUN apt-get install -y curl openjdk-7-jre-headless supervisor pwgen
 
 ADD ./lib/craftbukkit.jar /usr/local/etc/minecraft/craftbukkit.jar
